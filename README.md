@@ -1,21 +1,32 @@
 # Finance Bro 💸
 
-A Gen Z-focused financial decision app. Not just an expense tracker — it tells you whether a
+A Gen Z-focused financial decision app. Not just an expense tracker it tells you whether a
 purchase is actually worth making, **before** you spend the money.
 
 ## Features
 
-- **Purchase Analyzer** — Worth-It Score, pros/cons, time-to-recover, goal delay
-- **Future You Simulator** — projected balance with vs. without a purchase (1/3/6 months)
-- **Goal Delay Simulator** — Buy It vs. Skip It balance projection chart
-- **Worth-It Score Engine** — weighted scoring across affordability, frequency, motivation, goal impact
-- **Financial Personality Test** — Impulse Buyer / Trend Chaser / Saver / Investor / Balanced Planner
-- **Streaks & Gamification** — no-impulse / budget / saving streaks with Bronze → Legend badges
-- **AI Money Bro** — fully offline, rule-based chatbot (no API key required)
-- **FOMO Detector** — flags trend/social-pressure purchases and reality-checks you
-- **Smart Dashboard** — balance, goal progress, personality, streak, spending, recent decisions
-- **Spending Insights** — category breakdown, worth-it score trend, bought vs. skipped
-- **Exports** — download purchase history as CSV or Excel
+- **Purchase Analyzer**
+-  Worth-It Score, pros/cons, time-to-recover, goal delay
+- **Future You Simulator**
+-  projected balance with vs. without a purchase (1/3/6 months)
+- **Goal Delay Simulator**
+- Buy It vs. Skip It balance projection chart
+- **Worth-It Score Engine**
+-  weighted scoring across affordability, frequency, motivation, goal impact
+- **Financial Personality Test**
+-  Impulse Buyer / Trend Chaser / Saver / Investor / Balanced Planner
+- **Streaks & Gamification**
+-  no-impulse / budget / saving streaks with Bronze → Legend badges
+- **AI Money Bro**
+-  fully offline, rule-based chatbot (no API key required)
+- **FOMO Detector**
+- flags trend/social-pressure purchases and reality-checks you
+- **Smart Dashboard**
+-  balance, goal progress, personality, streak, spending, recent decisions
+- **Spending Insights**
+-  category breakdown, worth-it score trend, bought vs. skipped
+- **Exports**
+- download purchase history as CSV or Excel
 
 ## Tech Stack
 
