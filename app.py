@@ -100,20 +100,20 @@ def render_onboarding():
 # --------------------------------------------------------------------------
 def render_sidebar(user):
     with st.sidebar:
-        st.markdown(f"### 👋 Yo, {user['name']}")
+        st.markdown(f"###  Yo, {user['name']}")
         st.markdown(pill_html(user.get("personality") or "Personality: TBD", "purple"), unsafe_allow_html=True)
         st.markdown("---")
         page = st.radio(
             "Navigate",
             [
-                "🏠 Dashboard",
-                "🧮 Purchase Analyzer",
-                "🔮 Future You Simulator",
-                "🧠 Personality Quiz",
-                "🔥 Streaks & Badges",
-                "🤖 AI Money Bro",
-                "📊 Insights",
-                "⚙️ Profile & Export",
+                " Dashboard",
+                " Purchase Analyzer",
+                " Future You Simulator",
+                " Personality Quiz",
+                " Streaks & Badges",
+                " AI Money Bro",
+                " Insights",
+                " Profile & Export",
             ],
             label_visibility="collapsed",
         )
@@ -177,14 +177,14 @@ def render_dashboard(user):
             st.info("No purchases logged yet — try the Purchase Analyzer!")
 
     with col_right:
-        st.markdown("#### 🧠 Financial Personality")
+        st.markdown("####  Financial Personality")
         pers = user.get("personality")
         if pers:
             info = logic.PERSONALITY_DESCRIPTIONS.get(pers, {})
             st.markdown(
                 f"""
                 <div class="glass-card">
-                    <div style="font-size:2.2rem;">{info.get('emoji','🧠')}</div>
+                    <div style="font-size:2.2rem;">{info.get('emoji','')}</div>
                     <div style="font-weight:700; font-size:1.15rem;">{pers}</div>
                     <div style="color:#c7c7d1; font-size:0.88rem; margin-top:6px;">{info.get('desc','')}</div>
                 </div>
@@ -358,7 +358,7 @@ def render_purchase_analyzer(user):
 # FUTURE YOU SIMULATOR (Feature 4)
 # --------------------------------------------------------------------------
 def render_future_you(user):
-    st.markdown("## 🔮 Future You Simulator")
+    st.markdown("##  Future You Simulator")
     st.caption("See where your money lands in 1, 3, and 6 months — with vs without this purchase.")
 
     col1, col2 = st.columns(2)
@@ -393,7 +393,7 @@ def render_future_you(user):
 # PERSONALITY QUIZ (Feature 6)
 # --------------------------------------------------------------------------
 def render_quiz(user):
-    st.markdown("## 🧠 Financial Personality Test")
+    st.markdown("##  Financial Personality Test")
     st.caption("5 quick questions. Zero judgment (okay, maybe a little).")
 
     questions = logic.QUIZ_QUESTIONS
@@ -442,7 +442,7 @@ def render_quiz(user):
 # STREAKS & BADGES (Feature 7)
 # --------------------------------------------------------------------------
 def render_streaks(user):
-    st.markdown("## 🔥 Streaks & Badges")
+    st.markdown("##  Streaks & Badges")
     st.caption("Consistency is the real flex.")
 
     streak_types = [("no_impulse", "No-Impulse Streak", "🔥"), ("budget", "Budget Streak", "📊"), ("saving", "Saving Streak", "💰")]
@@ -495,7 +495,7 @@ def render_streaks(user):
 # AI MONEY BRO CHATBOT (Feature 8)
 # --------------------------------------------------------------------------
 def render_chatbot(user):
-    st.markdown("## 🤖 AI Money Bro")
+    st.markdown("##  AI Money Bro")
     st.caption("Ask me anything about your money. Fully offline, rule-based — no API key needed.")
 
     suggestions = ["Can I afford AirPods?", "Should I buy a PS5?", "How much should I save?", "What's my goal progress?"]
@@ -523,7 +523,7 @@ def render_chatbot(user):
 # SPENDING INSIGHTS (Feature 11)
 # --------------------------------------------------------------------------
 def render_insights(user):
-    st.markdown("## 📊 Spending Insights")
+    st.markdown("##  Spending Insights")
     purchases = db.get_purchases(user["id"])
     if not purchases:
         st.info("No purchase data yet. Analyze a few purchases first!")
@@ -571,7 +571,7 @@ def render_insights(user):
 # PROFILE & EXPORT (Feature 12)
 # --------------------------------------------------------------------------
 def render_profile(user):
-    st.markdown("## ⚙️ Profile & Export")
+    st.markdown("##  Profile & Export")
 
     with st.form("profile_form"):
         col1, col2 = st.columns(2)
@@ -646,21 +646,21 @@ def main():
 
     page = render_sidebar(user)
 
-    if page == "🏠 Dashboard":
+    if page == " Dashboard":
         render_dashboard(user)
-    elif page == "🧮 Purchase Analyzer":
+    elif page == " Purchase Analyzer":
         render_purchase_analyzer(user)
-    elif page == "🔮 Future You Simulator":
+    elif page == " Future You Simulator":
         render_future_you(user)
-    elif page == "🧠 Personality Quiz":
+    elif page == " Personality Quiz":
         render_quiz(user)
-    elif page == "🔥 Streaks & Badges":
+    elif page == " Streaks & Badges":
         render_streaks(user)
-    elif page == "🤖 AI Money Bro":
+    elif page == " AI Money Bro":
         render_chatbot(user)
-    elif page == "📊 Insights":
+    elif page == " Insights":
         render_insights(user)
-    elif page == "⚙️ Profile & Export":
+    elif page == " Profile & Export":
         render_profile(user)
 
 
